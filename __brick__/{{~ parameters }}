@@ -1,0 +1,1 @@
+{{#has_parameters}}{{module_name.pascalCase()}}Parameters{{/has_parameters}}
