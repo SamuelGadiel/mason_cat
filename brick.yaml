@@ -1,5 +1,5 @@
 name: cat
-description: A new brick created with the Mason CLI.
+description: Mason brick that generates a Clean Architecture Template (CAT).
 
 # The following defines the brick repository url.
 # Uncomment and update the following line before publishing the brick.
