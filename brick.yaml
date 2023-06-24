@@ -31,3 +31,9 @@ vars:
     # default: feature
     default: form_field_table_options
     prompt: "Module name:"
+
+  has_parameters:
+    type: boolean
+    description: Define if the module has parameters to send to backend
+    default: false
+    prompt: Send parameter to backend?
