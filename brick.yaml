@@ -25,8 +25,9 @@ environment:
 #  * an optional prompt phrase used when asking for the variable
 #  * a list of values (enums only)
 vars:
-  name:
+  module_name:
     type: string
-    description: Your name
-    default: Dash
-    prompt: What is your name?
+    description: The name of the module to be created
+    # default: feature
+    default: form_field_table_options
+    prompt: "Module name:"
