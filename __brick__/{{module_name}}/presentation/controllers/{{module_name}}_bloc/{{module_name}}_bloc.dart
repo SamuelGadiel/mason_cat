@@ -7,10 +7,10 @@ import '../../../domain/usecases/get_{{module_name}}.dart';
 import '../stores/{{module_name}}_store.dart';
 import 'events/get_{{module_name}}_event.dart';
 import 'events/{{module_name}}_events.dart';
-import 'states/{{module_name}}_initial_state.dart';
 import 'states/get_{{module_name}}_failure_state.dart';
 import 'states/get_{{module_name}}_loading_state.dart';
 import 'states/get_{{module_name}}_success_state.dart';
+import 'states/{{module_name}}_initial_state.dart';
 import 'states/{{module_name}}_states.dart';
 
 class {{module_name.pascalCase()}}Bloc extends Bloc<{{module_name.pascalCase()}}Events, {{module_name.pascalCase()}}States> implements Disposable {
