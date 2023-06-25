@@ -15,6 +15,6 @@ class Get{{module_name.pascalCase()}}Implementation implements Get{{module_name.
 
   @override
   Future<Either<Failure, {{module_name.pascalCase()}}>> call({{#has_parameters}}{{> parameters }} parameters{{/has_parameters}}) async {
-    return repository();
+    return repository({{#has_parameters}}parameters{{/has_parameters}});
   }
 }
