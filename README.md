@@ -1,9 +1,10 @@
 # Clean Architecture Template (CAT)
 
 <p align="center">
-Imagem aqui
-<!-- <img src="https://raw.githubusercontent.com/felangel/mason/master/assets/mason_full.png" height="125" alt="mason logo" />
-</p> -->
+<img src="https://github.com/SamuelGadiel/mason_cat/assets/22757108/526e8e56-6882-4d3e-9a6a-72e17de2c48f" height="172" alt="CAT logo" />
+</p>
+  
+
 
 <p align="center">
 <a href="https://github.com/felangel/mason/actions"><img src="https://github.com/felangel/mason/workflows/mason/badge.svg" alt="mason"></a>
@@ -34,3 +35,17 @@ mason make cat
 - `has_parameters`:
 
   A boolean that defines if the module has parameters that are passed to the backend.
+
+
+
+
+
+---
+
+## Credits
+
+The logo is build using an asset from [FlatIcon](https://www.flaticon.com/).
+
+<a href="https://www.flaticon.com/free-icons/pet" title="pet icons">Pet icons created by Freepik - Flaticon</a>
+
+All credits are given to the respective creators.
