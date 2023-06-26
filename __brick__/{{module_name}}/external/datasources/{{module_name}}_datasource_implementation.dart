@@ -1,3 +1,7 @@
+import '{{{message_parser_path}}}';
+import '{{{request_client_path}}}';
+import '{{{services_settings_path}}}';
+import '{{{generic_query_path}}}';
 import '../../domain/entities/{{module_name}}.dart';
 {{#has_parameters}}import '../../domain/entities/{{> parameters.snakeCase() }}.dart';{{/has_parameters}}
 import '../../infrastructure/datasources/{{module_name}}_datasource.dart';

@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 
+import '{{{failure_path}}}';
 import '../entities/{{module_name}}.dart';
 {{#has_parameters}}import '../entities/{{> parameters.snakeCase() }}.dart';{{/has_parameters}}
 
