@@ -1,9 +1,9 @@
 import '../../domain/entities/{{> parameters.snakeCase() }}.dart';
 
 class {{> parameters }}Mapper {
-  static Map<String, dynamic> toJson({{> parameters }} parameters){
+  static Map<String, dynamic> toJson({{> parameters }} parameters) {
     return {
-
+      
     };
   }
 }
