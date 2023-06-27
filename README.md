@@ -28,16 +28,17 @@
 
 ---
 
-A brick for Mason CLI that generates a clean architecture template for a given feature.
+A brick for [Mason CLI](https://github.com/felangel/mason) that generates a clean architecture template for a given feature.
 
 
 ## 📖 Introduction
 
-This brick was created to improve performance while developing new features to a Flutter project.
+This brick was created to improve performance while developing new features for a [Flutter](https://flutter.dev/) project.
 
 For a best fit, the project must follows a set of rules from Clean Architecture, specifically from [Clean-Dart](https://github.com/Flutterando/Clean-Dart)
 
-For the purpose of keep things easy I have modified some ideas of the Clean-Dart, and implemented some other points that I think it's important for the project. The complete code structure is the next:
+For the purpose of keeping things easy, I have modified some ideas of the Clean-Dart, and implemented some other points that I think it's important for a project.\
+The complete code structure is the next:
 
 - Domain
   - Entities
@@ -72,33 +73,36 @@ This structure is detailed in the ARCHITECTURE.md file.
 This brick has currently two variables that can be set by the user, they are
 
 - `module_name`:\
-  The name of the module you want to create.
+  The name of the module you want to generate.
 
-  Default to `feature`.
-
-  > ⚠️ The brick was projected to work with [snake_case](https://en.wikipedia.org/wiki/Snake_case). ⚠️
+  > ⚠️ The brick was projected to work with [snake_case](https://en.wikipedia.org/wiki/Snake_case) names. ⚠️
   > 
-  > Using other case when setting `module_name` can result in code not being correctly structured.
+  > Using any other case when setting `module_name` can result in code not being correctly structured.
+  
+  Defaults to `feature`. 
 
 
 - `has_parameters`:\
-  A boolean variable that defines if the module will pass some parameters to the backend.
+  A boolean variable that defines if the module will send parameters to the backend.
 
-  If set to `true` it will generate a parameters entity and mapper that will be used throught the layers.\
+  If set to `true` it will generate a parameters entity and mapper, that will be used throught the layers.\
   If set to `false` it won't generate the entity and mapper.
 
   Defaults to `false`.
 
 ### 🔒 Internal Variables
 
-As said, I've modified the Clean-Dart structure while building this brick. One of those things is that I have some custom files that are used throught the layers, but the brick can't identify those files since you can run it in any folder of the project.\
-The solution was to create a pre-generation script (basically a hook) that will identify the root of the app (the lib folder) and set some paths from this lib folder.
+As said, I've modified the Clean-Dart structure while building this brick.\
+One of those things is that I have some "custom files" that are needed throught the layers, but the brick can't identify those files since you can run it in any folder of the project.\
+The solution was to create a pre-generation script (basically a hook) that will identify the root of the app (the lib folder) and define some paths from this point.
 
-For example, I have a generic class named Failure that I use in the architecture. The pre-gen script will get the path of this file and add to the lib path, so it can be set as a import wherever it's needed. The user don't have to manually import it.
+For example, I have a generic class named Failure that I use in the architecture.\
+The pre-gen script will get the path of this file and concatenate to the lib path, so it can be set as a variable and imported wherever it's needed.\
+The user don't have to manually import it.
 
 If, for any reason, the pre-gen script can't find a lib folder it will simply return, the variables won't be setted, and the imports won't appear.
 
-Talking about those internal variables, they are five and their respective paths are:
+Talking about those internal variables, they are five and their respective values are:
 
 - `failure_path`:\
   The path to the generic Failure, a generic class that all failures in the project must implement.
@@ -116,12 +120,12 @@ Talking about those internal variables, they are five and their respective paths
   Path to file: `project_name/lib/app/core/shared/external/settings/services_settings.dart`
 
 - `generic_query_path`:\
-  The path to the generic query structure, it gives a base that all requests use.
+  The path to the generic query structure, which gives the base strcture of query parameters for all requests.
 
   Path to file: `project_name/lib/app/core/shared/infrastructure/mappers/name_method_query_mapper.dart`
   
 - `message_parser_path`:\
-  The path to a message parser. If the backend returns anything other than a success this class can parse and return a message of the problem.
+  The path to a message parser. If the backend returns anything other than a success this class can parse and return a message.
 
   Path to file: `project_name/lib/app/core/helpers/server_error_message_parser.dart`
 
@@ -178,7 +182,7 @@ I have requested access so it can be publically available for you, but until the
 
 #### ▶️ Using this brick
 
-There are two ways of using bricks. You can simply execute it in the terminal, or if you're using [Visual Studio Code](https://code.visualstudio.com/), you can install an extension that will help you running it inside a project.
+There are two ways of using bricks. You can simply execute it in the terminal or, if you're using [Visual Studio Code](https://code.visualstudio.com/), you can install an extension that will help you running it inside a project.
 
 - Using the terminal\
   If you want to use the terminal you can basically run this command
@@ -187,18 +191,29 @@ There are two ways of using bricks. You can simply execute it in the terminal, o
   mason make cat
   ```
 
-  It will ask you for the `module_name` and `has_parameters` variables.\
-  Once you entered those informations it will generate everything you need for the module
+  It will ask for the `module_name` and `has_parameters` variables.\
+  Once you have entered those informations it will generate everything you need for the module
 
   Another way you can run this command is by passing the `module_name` and `has_parameters` variables directly in the command
 
   ```bash
-  mason make cat --module_name 'your_module_name' --has_parameters 'false'
+  mason make cat --module_name 'your_module_name' --has_parameters false
   ```
 
-  Mason will ask you for any informations that are ommited, in case you don't pass it.
+  Mason will ask for any informations that are ommited, in case you don't pass it.
 
-- Using the VS Code extension
+- Using the VS Code extension\
+  Another way of running the brick, and my favorite one, is by installing the [Mason](https://marketplace.visualstudio.com/items?itemName=FelixAngelov.mason) extension for VS Code.
+
+  This exteension allows you to run any brick installed in the machine, locally or globally.\
+  For this, just right-click the folder where you want to generate the module and select the respective option
+
+  
+  ![Mason action](https://github.com/SamuelGadiel/mason_cat/assets/22757108/7e978c88-dfce-4b71-b482-13727ac095a4)
+
+  It will show a pop-up asking for you to select the brick you want to run, then it will ask for the necessary variables.\
+  After inserting all the informations the module will be generated.
+
   
 
 
