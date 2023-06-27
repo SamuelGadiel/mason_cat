@@ -1,4 +1,9 @@
-# 1.0.4+28
+# 1.0.6+30
+
+- Update docs
+- Update version
+
+# 1.0.5+28
 
 - Add changelog and version
 
