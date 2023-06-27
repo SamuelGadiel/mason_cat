@@ -136,8 +136,7 @@ If you have already used any mason brick you basically know what to do. But I'll
 
 #### 🛠️ Installing this brick
 
-At the time of this creation, only allowed people can publish to the [BrickHub](https://brickhub.dev/) since it's on open alpha.\
-I have requested access so it can be publically available for you, but until then you can use the following steps to install this brick:
+Here are the steps for you to use this brick
 
 1. Install mason through the dart command\
    I found that the best way to install mason is by using [their recommended way](https://docs.brickhub.dev/installing/#-pubdev).
@@ -148,19 +147,22 @@ I have requested access so it can be publically available for you, but until the
    dart pub global activate mason_cli
    ```
    
-   Keep in mind that if you use multiple versions of the Dart SDK you can see a warning while running the brick with a different dart version than the one you have installed the mason. The terminal shows a message saying it couldn't find the kernel, but at the end it manages to run the brick with no further issues.
+   Keep in mind that if you use multiple versions of the Dart SDK you can see a warning if running the brick with a different dart version than the one you have installed the mason./
+   The terminal shows the following message saying it couldn't load the kernel, but it manages to run the brick with no further issues.
+
+   > Can't load Kernel binary: Invalid kernel binary format version.
 
    About the homebrew version...\
-   I have tried the homebrew version, but it install a full version of the Dart SDK, even if you already have a version (or multiple) installed.\
+   I have tried the homebrew version, but it installs a full version of the Dart SDK, even if you already have a version (or multiple) installed.\
    It just adds another version of the Dart SDK. This discouraged me to use the homebrew version.
 
-2. Install the CAT brick\
+3. Install the CAT brick\
    Once mason is isntalled you have to install the CAT brick to it.\
    There are two ways of installing bricks using mason, locally or globally.\
    I'd recommend that you install it globally so you can use it in any flutter project, but if you just need it to a single project, you can install it locally.
 
    
-   In the future you will be able to do this just by running
+  This brick is [hosted in the BrickHub](https://brickhub.dev/bricks/cat), and you can install it with the commands
 
    ```bash
    # Local install
@@ -170,7 +172,7 @@ I have requested access so it can be publically available for you, but until the
    mason add cat -g
    ```
 
-   But for now you will have to install it referencing this repository. You can do this by using the following command
+   Alternatively, you can install it by referencing this repository. You can do this by using the following commands
 
    ```bash
    # Local install
@@ -184,8 +186,21 @@ I have requested access so it can be publically available for you, but until the
 
 There are two ways of using bricks. You can simply execute it in the terminal or, if you're using [Visual Studio Code](https://code.visualstudio.com/), you can install an extension that will help you running it inside a project.
 
+- Using the VS Code extension\
+  My favorite way for running this brick is by installing the [Mason](https://marketplace.visualstudio.com/items?itemName=FelixAngelov.mason) extension for VS Code.
+
+  This exteension allows you to run any brick installed in the machine, locally or globally.\
+  For this, just right-click the folder where you want to generate the module and select the respective option
+
+  
+  ![Mason action](https://github.com/SamuelGadiel/mason_cat/assets/22757108/7e978c88-dfce-4b71-b482-13727ac095a4)
+
+  It will show a pop-up asking for you to select the brick you want to run, then it will ask for the necessary variables.\
+  After inserting all the informations the module will be generated.
+
+
 - Using the terminal\
-  If you want to use the terminal you can basically run this command
+  If you prefer to use the terminal you can basically run this command
 
   ```bash
   mason make cat
@@ -201,18 +216,6 @@ There are two ways of using bricks. You can simply execute it in the terminal or
   ```
 
   Mason will ask for any informations that are ommited, in case you don't pass it.
-
-- Using the VS Code extension\
-  Another way of running the brick, and my favorite one, is by installing the [Mason](https://marketplace.visualstudio.com/items?itemName=FelixAngelov.mason) extension for VS Code.
-
-  This exteension allows you to run any brick installed in the machine, locally or globally.\
-  For this, just right-click the folder where you want to generate the module and select the respective option
-
-  
-  ![Mason action](https://github.com/SamuelGadiel/mason_cat/assets/22757108/7e978c88-dfce-4b71-b482-13727ac095a4)
-
-  It will show a pop-up asking for you to select the brick you want to run, then it will ask for the necessary variables.\
-  After inserting all the informations the module will be generated.
 
   
 
