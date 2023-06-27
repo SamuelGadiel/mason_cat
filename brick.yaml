@@ -1,14 +1,14 @@
 name: cat
 description: Mason brick that generates a Clean Architecture Template (CAT).
+repository: https://github.com/SamuelGadiel/mason_cat
 
 # The following defines the brick repository url.
 # Uncomment and update the following line before publishing the brick.
 # repository: https://github.com/my_org/my_repo
-
 # The following defines the version and build number for your brick.
 # A version number is three numbers separated by dots, like 1.2.34
 # followed by an optional build number (separated by a +).
-version: 0.1.0+1
+version: 1.0.0+28
 
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
