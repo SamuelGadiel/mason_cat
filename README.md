@@ -63,7 +63,7 @@ The complete code structure is the next:
   - Pages (Not supported)
   - Widgets (Not supported)
 
-This structure is detailed in the ARCHITECTURE.md file.
+This structure will be detailed in a ARCHITECTURE.md file (not yet created).
 
 ## 🚀 Getting Started
 
@@ -77,7 +77,8 @@ This brick has currently two variables that can be set by the user, they are
 
   > ⚠️ The brick was projected to work with [snake_case](https://en.wikipedia.org/wiki/Snake_case) names. ⚠️
   > 
-  > Using any other case when setting `module_name` can result in code not being correctly structured.
+  > Using any other case when setting `module_name` can result in code not being correctly structured.\
+  > I'll improve this in the future.
   
   Defaults to `feature`. 
 
@@ -147,7 +148,7 @@ Here are the steps for you to use this brick
    dart pub global activate mason_cli
    ```
    
-   Keep in mind that if you use multiple versions of the Dart SDK you can see a warning if running the brick with a different dart version than the one you have installed the mason./
+   Keep in mind that if you use multiple versions of the Dart SDK, for example if you're using [FVM](https://fvm.app/), you can see a warning if running the brick with a different dart version than the one you have installed the mason.\
    The terminal shows the following message saying it couldn't load the kernel, but it manages to run the brick with no further issues.
 
    > Can't load Kernel binary: Invalid kernel binary format version.
@@ -157,8 +158,8 @@ Here are the steps for you to use this brick
    It just adds another version of the Dart SDK. This discouraged me to use the homebrew version.
 
 3. Install the CAT brick\
-   Once mason is isntalled you have to install the CAT brick to it.\
-   There are two ways of installing bricks using mason, locally or globally.\
+   Once mason is installed you have to install the CAT brick to it.\
+   There are two ways of installing bricks using mason: locally or globally.\
    I'd recommend that you install it globally so you can use it in any flutter project, but if you just need it to a single project, you can install it locally.
 
    
@@ -176,7 +177,7 @@ Here are the steps for you to use this brick
 
    ```bash
    # Local install
-   mason add cat -g --git-url https://github.com/SamuelGadiel/mason_cat
+   mason add cat --git-url https://github.com/SamuelGadiel/mason_cat
 
    # Global install
    mason add cat -g --git-url https://github.com/SamuelGadiel/mason_cat
@@ -187,9 +188,9 @@ Here are the steps for you to use this brick
 There are two ways of using bricks. You can simply execute it in the terminal or, if you're using [Visual Studio Code](https://code.visualstudio.com/), you can install an extension that will help you running it inside a project.
 
 - Using the VS Code extension\
-  My favorite way for running this brick is by installing the [Mason](https://marketplace.visualstudio.com/items?itemName=FelixAngelov.mason) extension for VS Code.
+  My favorite way for running this brick is by installing the [Mason extension](https://marketplace.visualstudio.com/items?itemName=FelixAngelov.mason) for VS Code.
 
-  This exteension allows you to run any brick installed in the machine, locally or globally.\
+  This extension allows you to run any brick installed in the machine, locally or globally.\
   For this, just right-click the folder where you want to generate the module and select the respective option
 
   
@@ -206,10 +207,10 @@ There are two ways of using bricks. You can simply execute it in the terminal or
   mason make cat
   ```
 
-  It will ask for the `module_name` and `has_parameters` variables.\
+  It will ask for the necessary variables.\
   Once you have entered those informations it will generate everything you need for the module
 
-  Another way you can run this command is by passing the `module_name` and `has_parameters` variables directly in the command
+  Another way you can run this command is by passing the variables directly in the command
 
   ```bash
   mason make cat --module_name 'your_module_name' --has_parameters false
