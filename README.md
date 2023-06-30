@@ -227,6 +227,6 @@ There are two ways of using bricks. You can simply execute it in the terminal or
 
 The logo is build using an asset from [FlatIcon](https://www.flaticon.com/).
 
-<a href="https://www.flaticon.com/free-icons/pet" title="pet icons">Pet icons created by Freepik - Flaticon</a>
+[Cat image that was used](https://www.flaticon.com/free-icon/animal_1739308)
 
 All credits are given to the respective creators.
